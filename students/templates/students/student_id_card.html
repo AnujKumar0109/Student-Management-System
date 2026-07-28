@@ -1,0 +1,426 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student ID Card</title>
+
+    <!-- Bootstrap 5 CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: #f1f3f5;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Main Wrapper */
+      .id-card-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+      }
+
+      /* ID Card */
+      .id-card {
+        width: 400px;
+        max-width: 100%;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid #dee2e6;
+      }
+
+      /* Header */
+      .id-card-header {
+        background: linear-gradient(135deg, #0d6efd, #084298);
+
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .id-card-header .school-icon {
+        font-size: 32px;
+        margin-bottom: 2px;
+      }
+
+      .id-card-header h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .id-card-header p {
+        margin-bottom: 7px;
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      /* ID Card Badge */
+      .id-badge {
+        display: inline-block;
+        padding: 4px 14px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.2);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      /* Student Photo Area */
+      .student-photo-wrapper {
+        text-align: center;
+        margin-top: 10px;
+        height: 95px;
+      }
+
+      /* Student Photo */
+      .student-photo,
+      .default-photo {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Default Photo */
+      .default-photo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #e9ecef;
+        color: #6c757d;
+        font-size: 38px;
+      }
+
+      /* Student Information */
+      .student-info {
+        padding: 8px 25px 5px;
+      }
+
+      /* Student Name */
+      .student-name {
+        text-align: center;
+        font-size: 21px;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 2px;
+      }
+
+      /* Course */
+      .student-course {
+        text-align: center;
+        color: #0d6efd;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      /* Information Row */
+      .info-row {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e9ecef;
+        padding: 7px 0;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      /* Information Icon */
+      .info-icon {
+        width: 28px;
+        color: #0d6efd;
+        font-size: 15px;
+        flex-shrink: 0;
+      }
+
+      /* Information Label */
+      .info-label {
+        width: 100px;
+        font-weight: 600;
+        color: #6c757d;
+        font-size: 12px;
+        flex-shrink: 0;
+      }
+
+      /* Information Value */
+      .info-value {
+        flex: 1;
+        color: #212529;
+        font-size: 12px;
+        word-break: break-word;
+      }
+
+      /* Footer */
+      .id-card-footer {
+        background: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .student-id {
+        font-size: 12px;
+        color: #6c757d;
+        margin-bottom: 0;
+      }
+
+      .student-id strong {
+        color: #212529;
+      }
+
+      /* Action Buttons */
+      .action-buttons {
+        margin-top: 12px;
+        text-align: center;
+      }
+
+      .action-buttons .btn {
+        font-size: 13px;
+        padding: 7px 14px;
+      }
+
+      /* Print Settings */
+      @media print {
+        @page {
+          size: auto;
+          margin: 10mm;
+        }
+
+        body {
+          background: white;
+        }
+
+        .id-card-wrapper {
+          min-height: 0;
+          padding: 0;
+        }
+
+        .id-card {
+          box-shadow: none;
+          border: 1px solid #dee2e6;
+        }
+
+        .action-buttons {
+          display: none !important;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 450px) {
+        .id-card-wrapper {
+          padding: 10px;
+        }
+
+        .id-card {
+          width: 100%;
+        }
+
+        .student-info {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+
+        .info-label {
+          width: 90px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="id-card-wrapper">
+      <div>
+        <!-- ================================= -->
+        <!-- STUDENT ID CARD -->
+        <!-- ================================= -->
+
+        <div class="id-card">
+          <!-- Header -->
+          <div class="id-card-header">
+            <div class="school-icon">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <h3>Student Management System</h3>
+
+            <p>Official Student Identification Card</p>
+
+            <!-- Badge -->
+            <span class="id-badge"> STUDENT ID CARD </span>
+          </div>
+
+          <!-- ================================= -->
+          <!-- STUDENT PHOTO -->
+          <!-- ================================= -->
+
+          <div class="student-photo-wrapper">
+            {% if student.image %}
+
+            <img
+              src="{{ student.image.url }}"
+              alt="{{ student.first_name }} {{ student.last_name }}"
+              class="student-photo"
+            />
+
+            {% else %}
+
+            <div class="default-photo">
+              <i class="bi bi-person-fill"></i>
+            </div>
+
+            {% endif %}
+          </div>
+
+          <!-- ================================= -->
+          <!-- STUDENT INFORMATION -->
+          <!-- ================================= -->
+
+          <div class="student-info">
+            <!-- Student Name -->
+            <h2 class="student-name">
+              {{ student.first_name }} {{ student.last_name }}
+            </h2>
+
+            <!-- Course -->
+            <div class="student-course">{{ student.course }}</div>
+
+            <!-- Roll Number -->
+            <div class="info-row">
+              <div class="info-icon">
+                <i class="bi bi-person-badge-fill"></i>
+              </div>
+
+              <div class="info-label">Roll Number</div>
+
+              <div class="info-value">{{ student.roll_number }}</div>
+            </div>
+
+            <!-- Email -->
+            <div class="info-row">
+              <div class="info-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+
+              <div class="info-label">Email</div>
+
+              <div class="info-value">{{ student.email }}</div>
+            </div>
+
+            <!-- Phone -->
+            <div class="info-row">
+              <div class="info-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+
+              <div class="info-label">Phone</div>
+
+              <div class="info-value">{{ student.phone }}</div>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="info-row">
+              <div class="info-icon">
+                <i class="bi bi-calendar-event-fill"></i>
+              </div>
+
+              <div class="info-label">Date of Birth</div>
+
+              <div class="info-value">{{ student.date_of_birth }}</div>
+            </div>
+
+            <!-- Age -->
+            <div class="info-row">
+              <div class="info-icon">
+                <i class="bi bi-person-fill"></i>
+              </div>
+
+              <div class="info-label">Age</div>
+
+              <div class="info-value">{{ student.age }}</div>
+            </div>
+          </div>
+
+          <!-- ================================= -->
+          <!-- FOOTER -->
+          <!-- ================================= -->
+
+          <div class="id-card-footer">
+            <p class="student-id">
+              Student ID:
+
+              <strong> STU-{{ student.pk }} </strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================================= -->
+        <!-- ACTION BUTTONS -->
+        <!-- ================================= -->
+
+        <div class="action-buttons">
+          <!-- Print -->
+          <!-- Print -->
+          <button
+            type="button"
+            class="btn btn-primary me-2"
+            onclick="window.print()"
+          >
+            <i class="bi bi-printer-fill"></i>
+            Print ID Card
+          </button>
+
+          <!-- Download PDF -->
+          <a
+            href="{% url 'student_id_card_pdf' student.pk %}"
+            class="btn btn-danger"
+          >
+            <i class="bi bi-file-earmark-pdf-fill"></i>
+            Download PDF
+          </a>
+
+          <!-- Back -->
+          <a
+            href="{% url 'student_detail' student.pk %}"
+            class="btn btn-secondary"
+          >
+            <i class="bi bi-arrow-left"></i>
+            Back
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
