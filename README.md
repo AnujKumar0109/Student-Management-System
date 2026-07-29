@@ -1,7 +1,7 @@
 # 🎓 Student Management System
 
 <p align="center">
-  <strong>A modern Django-based web application for managing student records, users, and administrative operations.</strong>
+  <strong>A modern, secure, and responsive Django-based web application for managing student records, users, and administrative operations.</strong>
 </p>
 
 <p align="center">
@@ -13,32 +13,74 @@
   <img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
 </p>
 
+<p align="center">
+  <a href="https://student-management-system-k96h.onrender.com">
+    <img src="https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render&logoColor=white" alt="Live Demo">
+  </a>
+  <a href="https://github.com/AnujKumar0109/Student-Management-System">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+  </a>
+</p>
+
 ---
 
-## 📌 About The Project
+# 🚀 Live Demo
 
-**Student Management System** is a full-stack web application developed using **Python and Django** to simplify student record management.
+<p align="center">
+  🌐 <strong>Live Application</strong>
+</p>
 
-The application provides a secure and user-friendly interface where registered users can manage their own student records, while **Host/Admin users** can monitor registered users and view overall system statistics.
+<p align="center">
+  <a href="https://student-management-system-k96h.onrender.com" target="_blank">
+    <strong>👉 View Live Application</strong>
+  </a>
+</p>
 
-The system includes authentication, role-based access control, student CRUD operations, search and filtering, Excel data export, student ID cards, and a dedicated administrative dashboard.
+🔗 **Live URL:**
+https://student-management-system-k96h.onrender.com
 
 ---
 
-## ✨ Key Features
+# 📌 About The Project
 
-### 🔐 Authentication & User Management
+**Student Management System** is a full-stack web application developed using **Python and Django** to simplify and organize student record management.
+
+The application provides a secure and user-friendly platform where authenticated users can manage their student records, while authorized Host/Admin users can monitor registered users and view overall system statistics.
+
+The system includes:
+
+* 🔐 User authentication and authorization
+* 👤 User profile management
+* 🛡️ Role-based access control
+* 🎓 Complete student CRUD operations
+* 🔍 Search and filtering
+* ↕️ Student record sorting
+* 📄 Pagination
+* 📊 Dashboard statistics
+* 📥 Excel data export
+* 🪪 Student ID card generation
+* 🖼️ Student image upload
+* 🛡️ Dedicated Host/Admin dashboard
+
+---
+
+# ✨ Key Features
+
+## 🔐 Authentication & User Management
 
 * 📝 User registration
 * 🔑 Secure login and logout
 * 🔄 Password reset functionality
-* 👤 User profile
+* 👤 User profile management
 * 🛡️ Role-based access control
 * 🔒 Protected pages using Django authentication
+* 🚫 Unauthorized access protection
 
 ---
 
-### 🎓 Student Management
+## 🎓 Student Management
+
+Authenticated users can manage their student records with:
 
 * ➕ Add new students
 * 👁️ View detailed student information
@@ -53,38 +95,65 @@ The system includes authentication, role-based access control, student CRUD oper
 
 ---
 
-### 🛡️ Host/Admin Dashboard
+## 🛡️ Host/Admin Dashboard
 
-Host/Admin users have access to a dedicated dashboard with:
+Authorized Host/Admin users have access to a dedicated administrative dashboard.
 
-* 👥 View all registered normal users
+Features include:
+
+* 👥 View registered users
 * 🔎 Search users by username or email
 * 📊 View total registered users
 * 🎓 View total students
 * 📚 View total courses
 * 📈 View average student age
 * 📄 Paginated user records
-* 📥 Export registered users to Excel
+* 📥 Export registered user information to Excel
 
 ---
 
-### 📊 Data Export
+# 📊 Dashboard Statistics
 
-The application supports Excel export using **OpenPyXL**.
-
-👨‍🎓 **Normal Users**
-
-* Export their own student records
-
-🛡️ **Host/Admin**
-
-* Export registered user information
+| Statistic         | Description                      |
+| ----------------- | -------------------------------- |
+| 👥 Total Users    | Total number of registered users |
+| 🎓 Total Students | Total number of student records  |
+| 📚 Total Courses  | Number of unique courses         |
+| 📈 Average Age    | Average age of students          |
 
 ---
 
-## 🖥️ Application Overview
+# 📊 Data Export
 
-### 👤 Normal User Workflow
+The application provides Excel export functionality using **OpenPyXL**.
+
+## 👨‍🎓 Normal Users
+
+Users can export their student records containing:
+
+* Roll Number
+* Student Name
+* Email
+* Phone
+* Course
+* Age
+* Address
+* Date of Birth
+
+## 🛡️ Host/Admin
+
+Authorized administrators can export registered user information containing:
+
+* Username
+* Email
+* Date Joined
+* Last Login
+
+---
+
+# 🖥️ Application Workflow
+
+## 👤 Normal User Workflow
 
 ```text
 Register
@@ -101,12 +170,12 @@ Search / Filter / Sort
    ↓
 View Student Details
    ↓
-Generate ID Card
+Generate Student ID Card
    ↓
 Export Data to Excel
 ```
 
-### 🛡️ Host/Admin Workflow
+## 🛡️ Host/Admin Workflow
 
 ```text
 Host/Admin Login
@@ -124,31 +193,32 @@ Export User Data to Excel
 
 ---
 
-## 🧰 Technologies Used
+# 🧰 Technologies Used
 
-| Technology                    | Purpose                                |
-| ----------------------------- | -------------------------------------- |
-| 🐍 **Python**                 | Backend programming                    |
-| 🌐 **Django**                 | Web application framework              |
-| 🗄️ **SQLite**                | Database                               |
-| 🎨 **HTML5**                  | Page structure                         |
-| 🎨 **CSS3**                   | Styling                                |
-| 🅱️ **Bootstrap 5**           | Responsive UI                          |
-| ⚡ **JavaScript**              | Client-side functionality              |
-| 📊 **OpenPyXL**               | Excel file generation                  |
-| 🛡️ **Django Authentication** | User authentication and access control |
+| Technology                | Purpose                          |
+| ------------------------- | -------------------------------- |
+| 🐍 Python 3.11            | Backend programming              |
+| 🌐 Django 5.2             | Web framework                    |
+| 🗄️ SQLite                | Database                         |
+| 🎨 HTML5                  | Page structure                   |
+| 🎨 CSS3                   | Custom styling                   |
+| 🅱️ Bootstrap 5.3         | Responsive UI                    |
+| ⚡ JavaScript              | Client-side functionality        |
+| 📊 OpenPyXL               | Excel file generation            |
+| 🛡️ Django Authentication | Authentication and authorization |
+| 📄 ReportLab              | PDF/ID card generation           |
 
 ---
 
-## 🏗️ Project Structure
+# 🏗️ Project Structure
 
 ```text
 Student_Management_System/
 │
-├── 📁 accounts/
-│   ├── 📁 migrations/
-│   ├── 📁 templates/
-│   │   └── 📁 accounts/
+├── accounts/
+│   ├── migrations/
+│   ├── templates/
+│   │   └── accounts/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
@@ -156,11 +226,11 @@ Student_Management_System/
 │   ├── urls.py
 │   └── views.py
 │
-├── 📁 students/
-│   ├── 📁 migrations/
-│   ├── 📁 templates/
+├── students/
+│   ├── migrations/
+│   ├── templates/
 │   │   ├── base.html
-│   │   └── 📁 students/
+│   │   └── students/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
@@ -168,83 +238,81 @@ Student_Management_System/
 │   ├── urls.py
 │   └── views.py
 │
-├── 📁 student_project/
+├── student_project/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
 │   └── wsgi.py
 │
-├── 📄 manage.py
-├── 📄 requirements.txt
-├── 📄 .gitignore
-└── 📄 README.md
+├── media/
+├── static/
+├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
-Follow the steps below to run the project locally.
-
-### 1️⃣ Clone the Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/AnujKumar0109/Student-Management-System.git
 ```
 
-### 2️⃣ Navigate to the Project
+## 2️⃣ Navigate to the Project Directory
 
 ```bash
 cd Student-Management-System
 ```
 
-### 3️⃣ Create a Virtual Environment
+## 3️⃣ Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 4️⃣ Activate the Virtual Environment
+## 4️⃣ Activate the Virtual Environment
 
-**Windows PowerShell**
-
-```bash
-venv\Scripts\Activate.ps1
-```
-
-**Windows CMD**
+### Windows CMD
 
 ```bash
 venv\Scripts\activate
 ```
 
-### 5️⃣ Install Dependencies
+### Windows PowerShell
+
+```bash
+venv\Scripts\Activate.ps1
+```
+
+## 5️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6️⃣ Apply Database Migrations
+## 6️⃣ Apply Database Migrations
 
 ```bash
 python manage.py migrate
 ```
 
-### 7️⃣ Create a Superuser
+## 7️⃣ Create a Superuser
 
 ```bash
 python manage.py createsuperuser
 ```
 
-Enter your username, email, and password when prompted.
-
-### 8️⃣ Start the Development Server
+## 8️⃣ Run the Development Server
 
 ```bash
 python manage.py runserver
 ```
 
-### 9️⃣ Open the Application
+## 9️⃣ Open the Application
 
 Visit:
 
@@ -254,173 +322,163 @@ http://127.0.0.1:8000/
 
 ---
 
-## 👥 User Roles & Permissions
+# 👥 User Roles & Permissions
 
-### 👨‍🎓 Normal User
+## 👨‍🎓 Normal User
 
-Normal users can:
+Normal authenticated users can:
 
 * 🔐 Login securely
 * 👤 Manage their profile
 * ➕ Add students
-* 👁️ View their students
-* ✏️ Edit their student records
-* 🗑️ Delete their student records
+* 👁️ View students
+* ✏️ Edit student records
+* 🗑️ Delete student records
 * 🔍 Search students
 * 📚 Filter students by course
 * ↕️ Sort student records
-* 🪪 View student ID cards
-* 📥 Export their student data to Excel
+* 🪪 Generate student ID cards
+* 📥 Export student data to Excel
 
-### 🛡️ Host/Admin
+## 🛡️ Host/Admin
 
-Host/Admin users can:
+Authorized Host/Admin users can:
 
-* 🔐 Access the Host Dashboard
+* 📊 Access the Host/Admin dashboard
 * 👥 View registered users
-* 🔎 Search registered users
-* 📊 View overall system statistics
-* 📥 Export registered users to Excel
-* 🚫 Access is restricted from normal student management operations
+* 🔎 Search users
+* 📈 View system statistics
+* 📥 Export user data to Excel
+* 🔒 Access restricted administrative functionality
 
 ---
 
-## 📊 Dashboard Statistics
+# 🔒 Security
 
-The Host Dashboard provides an overview of the system, including:
+The application includes several security features:
 
-| Statistic         | Description                         |
-| ----------------- | ----------------------------------- |
-| 👥 Total Users    | Total registered normal users       |
-| 🎓 Total Students | Total students stored in the system |
-| 📚 Total Courses  | Number of unique courses            |
-| 📈 Average Age    | Average age of all students         |
-
----
-
-## 📥 Excel Export
-
-The system provides separate Excel export functionality based on user role.
-
-### 👨‍🎓 Normal User
-
-Exports:
-
-* Roll Number
-* Email
-* Phone
-* Course
-* Age
-* Address
-* Date of Birth
-
-### 🛡️ Host/Admin
-
-Exports:
-
-* Username
-* Email
-* Date Joined
-* Last Login
-
----
-
-## 🔒 Security
-
-The project uses Django's built-in security and authentication features.
-
-Security features include:
-
-* 🔐 Login-required protected views
-* 🛡️ Staff-based Host/Admin access
-* 👤 User-specific student data access
-* 🚫 Unauthorized access prevention
+* 🔐 Login-required views
+* 🛡️ Protected administrative dashboard
+* 👤 User-specific student records
+* 🚫 Unauthorized access protection
 * 🔑 Django authentication system
 * 🔒 CSRF protection
-* 🗃️ Sensitive files excluded using `.gitignore`
+* 🗃️ Sensitive files protected using `.gitignore`
 
-> ⚠️ For production deployment, configure environment variables for sensitive settings such as `SECRET_KEY` and database credentials.
+> ⚠️ **Production Security:** Never expose your Django `SECRET_KEY`, database credentials, API keys, or other sensitive configuration values. Store them securely using environment variables.
 
 ---
 
-## 🚀 Future Improvements
+# 🚀 Deployment
 
-The following features can be added in future versions:
+The **Student Management System** is deployed and hosted on **Render**.
 
-* ☁️ Deploy the application online
-* 🐘 PostgreSQL database support
-* 📄 Complete student ID card PDF generation
+## 🌐 Live Application
+
+👉 **Live URL:**
+https://student-management-system-k96h.onrender.com
+
+<p align="center">
+  <a href="https://student-management-system-k96h.onrender.com">
+    <img src="https://img.shields.io/badge/🚀_Open_Live_Application-success?style=for-the-badge" alt="Open Live Application">
+  </a>
+</p>
+
+For production deployment, make sure to configure:
+
+* `SECRET_KEY`
+* `DEBUG=False`
+* `ALLOWED_HOSTS`
+* Database configuration
+* Static file handling
+* Media file storage
+* Environment variables
+
+---
+
+# 📸 Screenshots
+
+Add screenshots of your application inside a `screenshots/` directory.
+
+## 🔐 Login Page
+
+![Login Screenshot](screenshots/login.png)
+
+## 🏠 Dashboard
+
+![Dashboard Screenshot](screenshots/dashboard.png)
+
+## 🎓 Student Management
+
+![Students Screenshot](screenshots/students.png)
+
+## 🪪 Student ID Card
+
+![ID Card Screenshot](screenshots/idcard.png)
+
+## 🛡️ Host/Admin Dashboard
+
+![Host Dashboard Screenshot](screenshots/host-dashboard.png)
+
+---
+
+# 🔮 Future Enhancements
+
+Possible future improvements include:
+
 * 📧 Email notifications
-* 👥 Advanced Host/Admin user management
-* 📊 Interactive charts and analytics
-* 🔌 REST API integration
-* 🧪 Expanded automated testing
-* ☁️ Cloud media storage
-* 📱 Progressive Web App support
-* 🌙 Dark mode
-* 🔔 Notification system
+* 📱 Fully optimized mobile experience
+* 📊 Advanced analytics and charts
+* 📄 PDF student report generation
+* 🔔 Real-time notifications
+* ☁️ Cloud-based media storage
+* 🗄️ PostgreSQL production database
+* 🔍 Advanced student filtering
+* 📅 Attendance management
+* 💰 Fee management
+* 📚 Course and subject management
 
 ---
 
-## 📸 Screenshots
+# 🤝 Contributing
 
-Add screenshots of your application here to showcase the project.
-
-### 🔐 Login Page
-
-> Add your login screenshot here.
-
-### 🎓 Student Dashboard
-
-> Add your student dashboard screenshot here.
-
-### 👥 Student Management
-
-> Add your student list screenshot here.
-
-### 🛡️ Host Dashboard
-
-> Add your Host Dashboard screenshot here.
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-To contribute:
+Contributions are welcome!
 
 1. Fork the repository
-2. Create a new branch
+2. Create a new feature branch
 3. Make your changes
 4. Commit your changes
 5. Push the branch
-6. Create a Pull Request
+6. Open a Pull Request
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-### Anuj Kumar
+## Anuj Kumar
 
-🐙 GitHub:
-https://github.com/AnujKumar0109
+<p>
+  <a href="https://github.com/AnujKumar0109">
+    <img src="https://img.shields.io/badge/GitHub-AnujKumar0109-black?logo=github" alt="GitHub">
+  </a>
+</p>
 
-💼 Project Repository:
-https://github.com/AnujKumar0109/Student-Management-System
+* **GitHub Profile:** https://github.com/AnujKumar0109
+* **Project Repository:** https://github.com/AnujKumar0109/Student-Management-System
+* **Live Application:** https://student-management-system-k96h.onrender.com
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is developed for **educational, learning, and portfolio purposes**.
 
 ---
 
 <p align="center">
-  ⭐ If you find this project useful, consider giving it a star!
+  ⭐ <strong>If you like this project, don't forget to give it a star!</strong> ⭐
 </p>
 
 <p align="center">
-  <strong>Built with ❤️ using Python & Django</strong>
+  <strong>Built with ❤️ using Python, Django & Bootstrap</strong>
 </p>
