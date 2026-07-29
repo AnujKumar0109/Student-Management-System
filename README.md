@@ -36,8 +36,7 @@
   </a>
 </p>
 
-🔗 **Live URL:**
-https://student-management-system-k96h.onrender.com
+
 
 ---
 
