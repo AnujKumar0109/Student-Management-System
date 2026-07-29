@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-@h=m#tghp*!%-2l#fozg0aj33vwhgyn=^7)9sv_kol7nrbv+%c
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["student-management-system-k96h.onrender.com"]
 
 
 # ==========================================
