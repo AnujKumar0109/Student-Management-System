@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-@h=m#tghp*!%-2l#fozg0aj33vwhgyn=^7)9sv_kol7nrbv+%c
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # ==========================================
@@ -222,5 +222,6 @@ EMAIL_BACKEND = (
 # ==========================================
 # DEFAULT PRIMARY KEY
 # ==========================================
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
